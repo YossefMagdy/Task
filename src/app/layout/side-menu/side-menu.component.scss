@@ -1,0 +1,75 @@
+.sideMenu {
+  background-color: black;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+.mainContainer {
+  width: 190px;
+  height: 100%;
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+.sideHeader {
+  width: 60px;
+  height: 100%;
+  padding: 1.5em 0;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.headerImg {
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.menuSwitch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.pulse {
+  background-color: rgba(0, 0, 0, 0.067);
+  animation: pulse-animation 2s infinite;
+}
+@keyframes pulse-animation {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+  }
+  100% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+  }
+}
+
+.inputContainer {
+  position: relative;
+  overflow: hidden;
+  input{
+    padding-inline-end: 73px;
+    
+  }
+  .selectOption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+    height: 100%;
+    border-end-end-radius: 4px;
+    border-start-end-radius: 5px;
+    border-inline-start: 2px solid black;
+    padding-inline-start: 5px;
+  }
+  .selectOption:focus{
+    outline: none;
+  }
+}

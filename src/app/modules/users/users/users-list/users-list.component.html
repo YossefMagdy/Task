@@ -1,0 +1,29 @@
+<div class="container py-4">
+  <div class="row g-4">
+    @for (user of usersList|userFilter:searchValue:searchType; track $index) {
+
+      <div class="col-xl-4 col-lg-6  " >
+        <div class="usersInfo shadow px-3 py-2 rounded d-flex align-items-center">
+          <div class="detailView" [routerLink]="['../',user.id,'user-detail']"><i class="fa-regular fa-eye"></i></div>
+          <div class="userDetail">
+            <div class="image ">
+              <img
+                [src]="user.avatar"
+                [alt]="user.first_name"
+              />
+            </div>
+            <div class=" ms-4">
+              <h5>{{ 'Name : ' + user.first_name + user.last_name }}</h5>
+              <p class="m-0">Email : <a class="" [href]="'mailto:'+user.email">{{user.email}}</a></p>
+            </div>
+          </div>
+   
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+
+<div class="Hspacer"></div>
+<app-table *ngIf="usersList" [usersList]="usersList"></app-table>

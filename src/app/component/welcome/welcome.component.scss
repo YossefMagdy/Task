@@ -1,0 +1,26 @@
+.Layout{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #0b0a0a;
+    overflow-y: hidden;
+}
+#particles-js{
+   position: absolute;
+   inset: 0;
+   z-index: 99;
+}
+.IntroContainer{
+    position: relative;
+    width: 350px;
+    height: 300px;
+    background-image: url('./../../../assets/pawel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    z-index: 99;
+    box-shadow: 0 0 3px 2px white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}  

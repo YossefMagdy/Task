@@ -1,0 +1,23 @@
+.layout{
+    display: flex;
+    position: relative;
+}
+.secondContainer{
+    width: 100%;
+}
+.firstContainer{
+    width: fit-content;
+    
+}
+
+@media (max-width:700px){
+    .firstContainer{
+        position: fixed;
+        z-index: 999999999;
+    }
+}
+@media (max-width:500px){
+    .secondContainer{
+        padding-inline-start: 50px;
+    }
+}

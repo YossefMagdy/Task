@@ -1,0 +1,16 @@
+@if (userDetail) {
+  <mat-card class="example-card shadow-lg mt-4 rounded-4">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image':headerImage}"></div>
+      <mat-card-title>{{userDetail.first_name + userDetail.last_name}}</mat-card-title>
+      <mat-card-subtitle><a [href]="'mailto:'+userDetail.email">{{userDetail.email}}</a></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="userDetail.avatar" alt="Photo of a Shiba Inu">
+    <mat-card-content class="mt-4">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae sed est voluptatem ut dicta ad?
+      </p>
+    </mat-card-content>
+   
+  </mat-card>
+}

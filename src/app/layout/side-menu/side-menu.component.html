@@ -1,0 +1,35 @@
+<div class="sideMenu">
+    <div class="mainContainer" [ngStyle]="{'width':menuOpen()?'190px':'0'}">
+    
+    <div style="cursor: pointer;" class="text-center mt-5 text-white" (click)="back()">
+        <h5 style="white-space: nowrap;"><i class="fa-solid fa-arrow-left"></i> Back</h5>
+    </div>
+
+    <div class="mt-5">
+        <div class="px-2 text-white text-uppercase">
+            <p style="white-space: nowrap;">user Search :</p>
+        </div>
+        <div class="px-2 inputContainer ">
+            <input #searchInput [type]="searchOption=='id'?'number':'text'" class="form-control"  [placeholder]="searchOption=='id'?'Id':searchOption=='name'?'FirstName':searchOption=='email'?'email':''" (keyup)="searchValue($event)">
+        <select name="" id="" (change)="searchType($event)" [(ngModel)]="searchOption"  class="selectOption ">
+            <option value="id">id</option>
+            <option value="name">name</option>
+            <option value="email">email</option>
+        </select>
+        </div>
+    </div>
+    </div>
+    <div class="sideHeader shadow-lg">
+        <div class="headerImg">
+           
+                <img  src="https://cdn-icons-png.freepik.com/256/1077/1077114.png" alt="">
+        </div>
+        <div class="menuSwitch" (click)="handleSideMenu(); addAnimation()">
+            <i style="cursor: pointer;" class="fa-solid  fa-bars fa-2x "></i>
+        </div>
+        <div>
+            <i style="cursor: pointer;" class="fa-solid fa-globe d-block mb-2"></i>
+            <i style="cursor: pointer;" class="fa-solid fa-share-nodes d-block"></i>
+        </div>
+    </div>
+</div>
